@@ -81,3 +81,6 @@ python get_score.py --name POEM --in-dataset CIFAR-10 --model-arch densenet --te
 # Present OOD detection metrics based on results:
 python get_results.py --name POEM  --in-dataset CIFAR-10 --test_epochs 100
 ```
+
+## Issues and further discussions
+Please create an issue for code-related questions. For further discussions, free feel to drop an email at ming5@wisc.edu.
