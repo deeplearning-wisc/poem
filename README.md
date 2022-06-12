@@ -61,7 +61,7 @@ tar -xvzf LSUN.tar.gz
 
 We will provide the scripts to train and evaluate other methods in the public version.
 
-## Quick Start
+## Quick Start and Model Checkpoints
 
 Here we provide a sample of commands for training on CIFAR-10 with DenseNet:
 
