@@ -65,10 +65,10 @@ Here we provide the commands to evaluate the OOD detection performance of POEM:
 
 ```python
 # Generate evaluation results for POEM:
-python get_score.py --name POEM --in-dataset CIFAR-10 --model-arch densenet --test_epochs 80
+python get_score.py --name POEM --in-dataset CIFAR-10 --model-arch densenet --test_epochs 100
 
 # Present OOD detection metrics based on results:
-python get_results.py --name POEM  --in-dataset CIFAR-10 --test_epochs 80
+python get_results.py --name POEM  --in-dataset CIFAR-10 --test_epochs 100
 ```
 
 ### For bibtex citations
