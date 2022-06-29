@@ -75,8 +75,8 @@ python get_results.py --name POEM  --in-dataset CIFAR-10 --test_epochs 80
 If you find our work helpful for your research, please consider citing our paper:
 ```
 @inproceedings{ming2022poem,
-  author    = {Ming, Yifei  and Fan, Ying  and Li, Yixuan},
-  title     = {POEM: Out-of-distribution Detection with Posterior Sampling},
+  author={Ming, Yifei  and Fan, Ying  and Li, Yixuan},
+  title={POEM: Out-of-distribution Detection with Posterior Sampling},
   booktitle={International Conference on Machine Learning},
   year={2022},
   organization={PMLR}
