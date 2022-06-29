@@ -54,7 +54,7 @@ tar -xvzf LSUN.tar.gz
 
 **Checkpoints:** Checkpoints for models trained with poem can be found [here](https://www.dropbox.com/sh/tsqwbob249gouzy/AABS21uLcB1TdwoHxMQpOXpia?dl=0). 
 
-For example, to test POEM trained for 80 epochs on CIFAR-100, put the corresponding checkpoint at `./checkpoints/CIFAR-100/POEM_Sample_1/checkpoint_80.pth.tar`. You can also train with POEM with the following command:
+For example, to test the model trained with POEM at 100 epochs on CIFAR-100, please download the corresponding checkpoint to `./checkpoints/CIFAR-100/POEM_Sample_1/checkpoint_100.pth.tar`. You can also train from scratch with the following command:
 
 ```python
 # train an POEM model on CIFAR-10 with DenseNet
