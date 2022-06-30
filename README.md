@@ -24,12 +24,8 @@ Our experiments are conducted on Ubuntu Linux 20.04 with Python 3.8.
 
 * Auxiliary outlier training set:
 
-  * [80 Million Tiny Images](https://groups.csail.mit.edu/vision/TinyImages/): to download **80 Million Tiny Images** dataset. In the **root** directory, run
+  * [80 Million Tiny Images](https://groups.csail.mit.edu/vision/TinyImages/): to download **80 Million Tiny Images** dataset. After downloading it, place it in this directory: `datasets/unlabeled_datasets/80M_Tiny_Images`
 
-    ```
-    cd datasets/unlabeled_datasets/80M_Tiny_Images
-    wget http://horatio.cs.nyu.edu/mit/tiny/data/tiny_images.bin
-    ```
 
   * ImageNet-RC (Downsampled ImageNet Datasets](https://patrykchrabaszcz.github.io/Imagenet32/): we use the ImageNet64x64, which can be downloaded from [ImageNet Website](http://image-net.org/download-images). After downloading it, place it in this directory: `datasets/unlabeled_datasets/ImageNet`. 
 ## Out-of-distribution Test Datasets
