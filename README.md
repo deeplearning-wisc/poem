@@ -1,5 +1,5 @@
 # Out-of-distribution Detection with Posterior Sampling
-This project is for the paper: [POEM: Out-of-distribution Detection with Posterior Sampling published at ICML 2022](https://arxiv.org/abs/2206.13687) (long talk). Some parts of the codebase are adapted from [ODIN](https://github.com/facebookresearch/odin), [Outlier Exposure](https://github.com/hendrycks/outlier-exposure), [Deep Mahalanobis Detector](https://github.com/pokaxpoka/deep_Mahalanobis_detector) and [NTOM](https://github.com/jfc43/informative-outlier-mining).
+This project is for the paper: [POEM: Out-of-distribution Detection with Posterior Sampling](https://arxiv.org/abs/2206.13687) published at ICML 2022 (long talk). Some parts of the codebase are adapted from [ODIN](https://github.com/facebookresearch/odin), [Outlier Exposure](https://github.com/hendrycks/outlier-exposure), [Deep Mahalanobis Detector](https://github.com/pokaxpoka/deep_Mahalanobis_detector) and [NTOM](https://github.com/jfc43/informative-outlier-mining).
 
 ## Required Packages
 
