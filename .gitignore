@@ -2,8 +2,10 @@
 .npy
 *.pyc
 *.tar.gz
+*.zip
+*.pth.tar
 
-datasets/ood_datasets/
+datasets/ood_datasets/*
+datasets/unlabeled_datasets/*
 datasets/cifar10/
 energy_results/
-*.pth.tar
