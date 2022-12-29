@@ -1,7 +1,9 @@
 .DS_Store
 .npy
 *.pyc
+*.tar.gz
 
-datasets/
+datasets/ood_datasets/
+datasets/cifar10/
 energy_results/
 *.pth.tar
