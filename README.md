@@ -75,4 +75,4 @@ If you find our work helpful for your research, please consider citing our paper
 
 ### Issues and further discussions
 
-Please create an issue for code-related questions. For further discussions, free feel to drop an email at ming5@wisc.edu.
+Please create an issue for code-related questions. For clarification and further discussions, free feel to drop an email at ming5@wisc.edu.
