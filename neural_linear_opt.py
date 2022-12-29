@@ -77,7 +77,7 @@ class NeuralLinear(object):
         out_len = len(train_loader_out.dataset)
         in_len = len(train_loader_in.dataset)
         if epoch == 0:
-            noise = torch.normal(0.0, args.sigma_n**0.5, size = (1,)).item()
+            noise = torch.normal(0.0, self.args.sigma_n**0.5, size = (1,)).item()
             self.train_y_id_base = torch.full((in_len, 1), -1 * self.args.conf + noise, dtype = torch.float)
             self.train_y_ood_base = torch.full((out_len, 1), 1 * self.args.conf + noise, dtype = torch.float)
         elif epoch >= self.args.BUF_SIZE:
@@ -181,13 +181,13 @@ class NeuralLinear(object):
             s = torch.matmul(z.T, z)
             A = s/self.sigma_n + 1/self.sigma*self.eye
             B = torch.matmul(z.T, y.double())/self.sigma_n
-            A_eig_val, A_eig_vec = torch.symeig(A, eigenvectors=True)
+            # A_eig_val, A_eig_vec = torch.symeig(A, eigenvectors=True)
             inv = torch.inverse(A.double())
             self.mu_w[0] = torch.matmul(inv, B).squeeze()
             temp_cov = self.sigma*inv        
             eig_val, eig_vec = torch.symeig(temp_cov, eigenvectors=True)
-            log.debug("After inverse. eigenvalue (pd): {}".format(eig_val[:20]) )
-            log.debug("After inverse. eigenvalue (pd): {}".format(eig_val[-20:]) )
+            # log.debug("After inverse. eigenvalue (pd): {}".format(eig_val[:20]) )
+            # log.debug("After inverse. eigenvalue (pd): {}".format(eig_val[-20:]) )
             if torch.any(eig_val < 0):
                 self.cov_w[0] = torch.matmul(torch.matmul(eig_vec, torch.diag(torch.abs(eig_val))), torch.t(eig_vec))
             else:

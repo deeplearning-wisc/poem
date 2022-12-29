@@ -21,7 +21,7 @@ def main():
 
     if args.in_dataset == "CIFAR-10" or args.in_dataset == "CIFAR-100":
         out_datasets = ['places365','LSUN', 'LSUN_resize', 'iSUN', 'dtd', 'SVHN']
-    fprs = dict()
+    fprs = dict() 
     for test_epoch in args.test_epochs.split():
         all_results_ntom = []
         save_dir =  f"./energy_results/{args.in_dataset}/{args.name}" 

@@ -16,7 +16,7 @@ class ImageNet(torch.utils.data.Dataset):
         self.img_size = img_size
         self.labels = []
         for idx in range(1, 11):
-            data_file = os.path.join('../datasets/unlabeled_datasets/ImageNet', 'train_data_batch_{}'.format(idx))
+            data_file = os.path.join('datasets/unlabeled_datasets/ImageNet', 'train_data_batch_{}'.format(idx))
             d = unpickle(data_file)
             y = d['labels']
             y = [i-1 for i in y]
@@ -31,7 +31,7 @@ class ImageNet(torch.utils.data.Dataset):
         self.transform = transform
 
     def load_image_batch(self, batch_index):
-        data_file = os.path.join('../datasets/unlabeled_datasets/ImageNet', 'train_data_batch_{}'.format(batch_index))
+        data_file = os.path.join('datasets/unlabeled_datasets/ImageNet', 'train_data_batch_{}'.format(batch_index))
         d = unpickle(data_file)
         x = d['data']
         

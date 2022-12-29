@@ -44,13 +44,13 @@ parser.add_argument('--ood-batch-size', default= 400, type=int,
                     help='mini-batch size (default: 400) used for testing')
 parser.add_argument('--name', '-n', required=True, type=str,
                     help='name of experiment')
-parser.add_argument('--test_epochs', "-e", default = "80 90 100", type=str,
+parser.add_argument('--test_epochs', "-e", default = "90 100", type=str,
                      help='# epoch to test performance')
 parser.add_argument('--log_name',
                     help='Name of the Log File', type = str, default = "info_val.log")
 parser.add_argument('--base-dir', default='output/ood_scores', type=str, help='result directory')
 #Device options
-parser.add_argument('--gpu-ids', default='2', type=str,
+parser.add_argument('--gpu-ids', default='0', type=str,
                     help='id(s) for CUDA_VISIBLE_DEVICES')
 # Miscs
 parser.add_argument('--manualSeed', type=int, help='manual seed')
@@ -190,6 +190,7 @@ def get_ood_loader(out_dataset):
                                                      num_workers=2)
         elif out_dataset == 'places365':
             # root = '/nobackup/dataset_myf/places_subset'
+            # root = "datasets/ood_datasets/places365"
             testsetout = torchvision.datasets.ImageFolder(root="datasets/ood_datasets/places365",
                 transform=transforms.Compose([transforms.Resize(32), transforms.CenterCrop(32), transforms.ToTensor()]))
             subset = torch.utils.data.Subset(testsetout, np.random.choice(len(testsetout), 10000, replace=False))

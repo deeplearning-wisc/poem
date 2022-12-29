@@ -74,7 +74,7 @@ parser.add_argument('--b0', type=float, default=6.0, help='b0')
 parser.add_argument('--lambda_prior', type=float, default=0.25, help='lambda_prior')
 parser.add_argument('--sigma', type=float, default=20, help='control var for weights')
 parser.add_argument('--sigma_n', type=float, default=0.5, help='control var for noise')
-parser.add_argument('--conf', type=float, default=3.9, help='control ground truth for bayesian linear regression. 2.95--0.05; 3.9--0.98; 4.6 --0.99; 6.9--0.999')
+parser.add_argument('--conf', type=float, default=3.0, help='control ground truth for bayesian linear regression. 2.95--0.05; 3.9--0.98; 4.6 --0.99; 6.9--0.999')
 # saving, naming and logging
 parser.add_argument('--resume', default='', type=str,
                     help='path to latest checkpoint (default: none)')
@@ -89,7 +89,7 @@ parser.add_argument('--ood_factor', type=float, default= 1,
 parser.add_argument('--tensorboard',
                     help='Log progress to TensorBoard', action='store_true')
 #Device options
-parser.add_argument('--gpu-ids', default='3', type=str,
+parser.add_argument('--gpu-ids', default='1', type=str,
                     help='id(s) for CUDA_VISIBLE_DEVICES')
 parser.add_argument('--energy_model', default='True', type=bool,
                     help='if use energy model')
@@ -264,7 +264,7 @@ def main():
         # evaluate on validation set
         prec1 =  bayes_nn.validate(val_loader, model, criterion, epoch, log, args.energy_model)
         # remember best prec@1 and save checkpoint
-        if (epoch + 1) % args.save_epoch == 0:
+        if  (epoch + 1) % args.save_epoch == 0 and (epoch + 1) >= 80:
             # data parallel save
             save_checkpoint({
                 'epoch': epoch + 1,

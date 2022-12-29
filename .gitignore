@@ -4,8 +4,9 @@
 *.tar.gz
 *.zip
 *.pth.tar
-
+__pychche__/
 datasets/ood_datasets/*
 datasets/unlabeled_datasets/*
 datasets/cifar10/
 energy_results/
+checkpoints/
