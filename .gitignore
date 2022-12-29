@@ -1,2 +1,7 @@
 .DS_Store
 .npy
+*.pyc
+
+datasets/
+energy_results/
+*.pth.tar
