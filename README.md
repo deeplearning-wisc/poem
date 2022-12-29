@@ -51,14 +51,14 @@ tar -xvzf LSUN.tar.gz
 For example, to test the model trained with POEM at 100 epochs on CIFAR-100, please download the corresponding checkpoint to `./checkpoints/CIFAR-100/POEM_Sample_1/checkpoint_100.pth.tar`. You can also train from scratch with `train_poem.py`. Note that for each ID dataset, posterior sampling hyperparameters need to be tuned, especially the ones controlling the variances for noises and weights: `sigma` and `sigma_n`. To reproduce the results in the paper, please check the model checkpoints [here](https://www.dropbox.com/sh/tsqwbob249gouzy/AABS21uLcB1TdwoHxMQpOXpia?dl=0).
 
 
-Here we provide the commands to evaluate the OOD detection performance of POEM:
+To evaluate the OOD detection performance of POEM, for example, with a checkpoint named `POEM_Sample_1`:
 
 ```python
 # Generate evaluation results for POEM:
-python get_score.py --name POEM --in-dataset CIFAR-10 --model-arch densenet --test_epochs 100
+python get_score.py --name POEM_Sample_1 --in-dataset CIFAR-10 --model-arch densenet --test_epochs 100
 
 # Present OOD detection metrics based on results:
-python get_results.py --name POEM  --in-dataset CIFAR-10 --test_epochs 100
+python get_results.py --name POEM_Sample_1  --in-dataset CIFAR-10 --test_epochs 100
 ```
 
 ### For bibtex citations
