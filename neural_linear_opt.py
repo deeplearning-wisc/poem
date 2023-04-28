@@ -93,6 +93,7 @@ class NeuralLinear(object):
             else: 
                 replace_idx = np.arange(start_idx, start_idx + out_len)
                 self.train_x_ood[replace_idx] =  out_set[0]
+                start_idx += out_len
             in_input = in_set[0].cuda() 
             in_target = in_set[1].cuda() 
             out_input = out_set[0].cuda() 
