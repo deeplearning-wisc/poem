@@ -189,8 +189,6 @@ def get_ood_loader(out_dataset):
             testloaderOut = torch.utils.data.DataLoader(testsetout, batch_size=args.ood_batch_size, shuffle=True,
                                                      num_workers=2)
         elif out_dataset == 'places365':
-            # root = '/nobackup/dataset_myf/places_subset'
-            # root = "datasets/ood_datasets/places365"
             testsetout = torchvision.datasets.ImageFolder(root="datasets/ood_datasets/places365",
                 transform=transforms.Compose([transforms.Resize(32), transforms.CenterCrop(32), transforms.ToTensor()]))
             subset = torch.utils.data.Subset(testsetout, np.random.choice(len(testsetout), 10000, replace=False))
