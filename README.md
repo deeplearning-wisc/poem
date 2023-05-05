@@ -39,7 +39,7 @@ We provide links and instructions to download each dataset:
 * [LSUN-resize](https://www.dropbox.com/s/moqh2wh8696c3yl/LSUN_resize.tar.gz): download it and place it in the folder of `datasets/ood_datasets/LSUN_resize`.
 * [iSUN](https://www.dropbox.com/s/ssz7qxfqae0cca5/iSUN.tar.gz): download it and place it in the folder of `datasets/ood_datasets/iSUN`.
 
-For example, run the following commands in the **root** directory to download **LSUN-C**:
+For example, run the following commands in the **root** directory to download **LSUN**:
 ```
 cd datasets/ood_datasets
 wget https://www.dropbox.com/s/fhtsw1m3qxlwj6h/LSUN.tar.gz
