@@ -48,7 +48,7 @@ tar -xvzf LSUN.tar.gz
 
 ## Quick Start 
 
-For example, to test the model trained with POEM at 100 epochs on CIFAR-10, please download the corresponding checkpoint to `./checkpoints/CIFAR-10/POEM_Sample_1/checkpoint_100.pth.tar`. You can also train from scratch with `train_poem.py`. For each ID dataset, posterior sampling hyperparameters can be tuned for better performance especially the ones controlling the variances for noises and weights: `sigma` and `sigma_n`. We observe that training longer until the model fully converges is helpful. For more stable performance, we recommend training CIFAR-10 for 100 epoches and CIFAR-100 for 200 epoches. To reproduce the results in the paper, we provide checkpoints for tuned models [here](https://www.dropbox.com/sh/tsqwbob249gouzy/AABS21uLcB1TdwoHxMQpOXpia?dl=0).
+For example, to test the model trained with POEM at 100 epochs on CIFAR-10, please download the corresponding checkpoint to `./checkpoints/CIFAR-10/POEM_Sample_1/checkpoint_100.pth.tar`. You can also train from scratch with `train_poem.py`. For each ID dataset, posterior sampling hyperparameters can be tuned for better performance especially the ones controlling the variances for noises and weights: `sigma` and `sigma_n`. We observe that training longer until the model fully converges is helpful. For more stable performance, we recommend training CIFAR-10 for 100 epochs and CIFAR-100 for 200 epochs. To reproduce the results in the paper, we provide checkpoints for tuned models [here](https://www.dropbox.com/sh/tsqwbob249gouzy/AABS21uLcB1TdwoHxMQpOXpia?dl=0).
 
 
 To evaluate the OOD detection performance of POEM, for example, with a checkpoint named `POEM_Sample_1`:
