@@ -26,7 +26,7 @@ parser = argparse.ArgumentParser(description='Posterior sampling-based outlier m
 parser.add_argument('--in-dataset', default="CIFAR-10", type=str, help='in-distribution dataset e.g. CIFAR-10')
 parser.add_argument('--model-arch', default='densenet', type=str, help='model architecture e.g. simplenet densenet')
 
-parser.add_argument('--save-epoch', default= 10, type=int,
+parser.add_argument('--save-epoch', default=10, type=int,
                     help='save the model every save_epoch') # freq; save model state_dict()
 parser.add_argument('--print-freq', '-p', default=10, type=int,
                     help='print frequency (default: 10)') # print every print-freq batches during training
@@ -36,7 +36,7 @@ parser.add_argument('-b', '--batch-size', default=64, type=int,
 # training schedule
 parser.add_argument('--start-epoch', default=0, type=int,
                     help='manual epoch number (useful on restarts)')
-parser.add_argument('--epochs', default= 100, type=int,
+parser.add_argument('--epochs', default=100, type=int,
                     help='number of total epochs to run')
 parser.add_argument('--lr', '--learning-rate', default=0.1, type=float,
                     help='initial learning rate')
@@ -44,7 +44,7 @@ parser.add_argument('--momentum', default=0.9, type=float, help='momentum')
 parser.add_argument('--weight-decay', '--wd', default=0.0001, type=float,
                     help='weight decay (default: 0.0001)')
 # densenet
-parser.add_argument('--layers', default= 100, type=int,
+parser.add_argument('--layers', default=100, type=int,
                     help='total number of layers (default: 100) for DenseNet')
 parser.add_argument('--growth', default=12, type=int,
                     help='number of new channels per layer (default: 12)')
@@ -64,9 +64,9 @@ parser.add_argument('--no-bottleneck', dest='bottleneck', action='store_false',
                     help='To not use bottleneck block')
 parser.add_argument('--beta', default=1.0, type=float, help='beta for out_loss')
 # ood sampling and mining
-parser.add_argument('--ood-batch-size', default= 2000, type=int,
-                    help='mini-batch size (default: 400) used for ood mining')
-parser.add_argument('--pool-size', default= 200, type=int,
+parser.add_argument('--ood-batch-size', default=2000, type=int,
+                    help='mini-batch size used for ood mining')
+parser.add_argument('--pool-size', default=200, type=int,
                     help='pool size')
 #posterior sampling
 parser.add_argument('--a0', type=float, default=6.0, help='a0')
@@ -79,17 +79,17 @@ parser.add_argument('--conf', type=float, default=3.0, help='control ground trut
 parser.add_argument('--resume', default='', type=str,
                     help='path to latest checkpoint (default: none)')
 parser.add_argument('--auxiliary-dataset', default='imagenet', 
-                    choices=['imagenet','80m_tiny_images', 'partial_imagenet'], type=str, help='which auxiliary dataset to use')
+                    choices=['imagenet','80m_tiny_images'], type=str, help='which auxiliary dataset to use')
 parser.add_argument('--name', required = True, type=str,
                     help='name of experiment')
 parser.add_argument('--log_name',
                     help='Name of the Log File', type = str, default = "info.log")
-parser.add_argument('--ood_factor', type=float, default= 1,
-                 help='ood_dataset_size = len(train_loader.dataset) * ood_factor default = 2.0')
+parser.add_argument('--ood_factor', type=float, default=1,
+                 help='ood_dataset_size = len(train_loader.dataset) * ood_factor')
 parser.add_argument('--tensorboard',
                     help='Log progress to TensorBoard', action='store_true')
 #Device options
-parser.add_argument('--gpu-ids', default='1', type=str,
+parser.add_argument('--gpu-ids', default='0', type=str,
                     help='id(s) for CUDA_VISIBLE_DEVICES')
 parser.add_argument('--energy_model', default='True', type=bool,
                     help='if use energy model')
