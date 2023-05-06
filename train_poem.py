@@ -180,7 +180,10 @@ def main():
             datasets.CIFAR100('./datasets/cifar100', train=False, transform=transform_test),
             batch_size=args.batch_size, shuffle=True, **kwargs)
 
-        lr_schedule=[50, 75, 90]
+        if args.epochs == 200:
+            lr_schedule= [60, 120, 180]
+        elif args.epochs == 100:
+            lr_schedule=[50, 75, 90]
 
         num_classes = 100
         pool_size = args.pool_size
