@@ -147,6 +147,7 @@ class NeuralLinear(object):
             self.train_y_ood = self.train_y_ood_base.repeat(epoch + 1, 1)
         self.train_x = torch.cat( (self.train_x_id, self.train_x_ood), dim = 0)
         self.train_y = torch.cat( (self.train_y_id, self.train_y_ood), dim = 0)
+        
     def sample_BDQN(self):
         # Sample sigma^2, and beta conditional on sigma^2
         with torch.no_grad():
